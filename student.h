@@ -6,29 +6,29 @@ private:
           double gpa; 
 	
 public:
-    student(long=111 ,double=2.5,string="Nattawut",long=521142);
+    student(long=111 ,double=2.5,string="Nattawut");
     ~student();
     void display(); // display_person
    
 };
 
-student::student(long i, double g,string s,long nid):MU_person(i,s,nid){ //ส่งข้อมูลให้ MU_person (id, name)
+student::student(long i, double g,string s):MU_person(i,s){ //ส่งข้อมูลให้ MU_person (id, name)
 // Finish constructor to set all values
   //id=i;      //ถ้ามีส่งข้อมูลแล้วไม่ต้องเขียนซ้ำ
   //name=s;
   gpa=g;
-  cout<<"MU student constructor  "<<gpa<<endl;
+  std::cout<<"MU student constructor  "<<gpa<<std::endl;
          
   
 }
 student::~student(){
-     cout<<"-------"<<endl;
-     cout<<"student destructor "<<gpa<<endl; 
+     std::cout<<"-------"<<std::endl;
+     std::cout<<"student destructor "<<gpa<<std::endl; 
 }
 
 
 void student::display(){
   display_person();
-  cout<<"GPA: "<<gpa<<endl;
+  std::cout<<"GPA: "<<gpa<<std::endl;
   //Finish Display function
 }

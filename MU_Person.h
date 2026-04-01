@@ -1,13 +1,15 @@
-#include "Thai_person.h"
+//#include "Thai_person.h"
+#include "NODE.h"
 
-class MU_person:public Thai_person{ //thai_person บนสุด--> MU_person--> student
+//class MU_person:public Thai_person{ //thai_person บนสุด--> MU_person--> student
+class MU_person:public NODE{
 private: 
 
 protected:long id;
 	string name;
 
 public:
-	MU_person(long=112 ,string ="Prapaporn",long=123400);
+	MU_person(long=112 ,string ="Prapaporn");
   void display_person();
   ~MU_person();
 };
@@ -15,17 +17,18 @@ public:
 
 
 MU_person::~MU_person(){
-  cout<<"Destructor id="<<id<<endl;
+  std::cout<<"Destructor id="<<id<<std::endl;
 }
-MU_person::MU_person(long x,string n,long nid):Thai_person(nid){
+MU_person::MU_person(long x,string n):NODE(x){
   id=x;
   name=n;
   // Set up all MU_Person values
-  cout<<"MU person constructor "<<id<<endl;
+  std::cout<<"MU person constructor "<<id<<std::endl;
 }
 
 void MU_person::display_person(){
-  cout<<"Show student information"<<endl;
-  cout<<"id: "<<id<<endl;
-  cout<<"name: "<<name<<endl;
+  std::cout<<std::endl<<"Show student information"<<std::endl;
+  std::cout<<"id: "<<id<<std::endl;
+  //display_thai();
+  std::cout<<"name: "<<name<<std::endl;
 }
