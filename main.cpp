@@ -3,9 +3,9 @@ using namespace std;
 #include "student.h"
 
 int main(){
-  MU_person m;
+  MU_person m(123521);
 
-	 student m1(6613121,2,"Vivi"),m2(112),m3;
+	 student m1(6613121,2,"Vivi",101011),m2(112),m3;
    m1.display();
  // student m1(6613118,3.9,"Atom");
 //student m2(6613112),m3,*p;
