@@ -1,5 +1,6 @@
 //#include "Thai_person.h"
 #include "NODE.h"
+#include <string.h>
 
 //class MU_person:public Thai_person{ //thai_person บนสุด--> MU_person--> student
 class MU_person:public NODE{

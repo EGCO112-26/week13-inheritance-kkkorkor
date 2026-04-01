@@ -1,9 +1,10 @@
 #include <iostream>
 #include<cstdlib>
+using namespace std;
 #include"NODE.h"
 #include"LL.h"
 #include "student.h"
-using namespace std;
+
 int main(int argc, char *argv[])
 {  LL A;
    int i;
