@@ -3,9 +3,10 @@ using namespace std;
 #include "student.h"
 
 int main(){
-MU_Person m;
- 
-	//student m1(6613121,2,"Vivi"),m2(112),m3;
+  MU_person m;
+
+	 student m1(6613121,2,"Vivi"),m2(112),m3;
+   m1.display();
  // student m1(6613118,3.9,"Atom");
 //student m2(6613112),m3,*p;
   //m1.display(); // id gpa name
