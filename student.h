@@ -6,16 +6,16 @@ private:
           double gpa; 
 	
 public:
-    student(long=111 ,double=2.5,string="Nattawut");
+    student(long=111 ,double=2.5,std::string="Nattawut");
     ~student();
     void display(); // display_person
    
 };
 
-student::student(long i, double g,string s):MU_person(i,s){ //ส่งข้อมูลให้ MU_person (id, name)
+student::student(long id, double g,std::string n):MU_person(id,n){ //ส่งข้อมูลให้ MU_person (id, name)
 // Finish constructor to set all values
   //id=i;      //ถ้ามีส่งข้อมูลแล้วไม่ต้องเขียนซ้ำ
-  //name=s;
+  //name=n;
   gpa=g;
   std::cout<<"MU student constructor  "<<gpa<<std::endl;
          

@@ -9,13 +9,12 @@ LL::LL(){
 
 LL::~LL(){
           //clear all nodes
-      NODE* t=hol;
-     int i;
-     for(i=0;i<size;i++){
-          hol=hol->move_next();
-          delete(t);
-          //t=hol;
-      }    
+     NODE* current = hol;
+     while(current != NULL){
+        NODE* temp = current;
+        current = current->move_next();
+        delete temp;
+     } 
 }
 
 void LL::show_all(){
@@ -26,11 +25,10 @@ void LL::show_all(){
           t=t->move_next();
      }
 }
-void LL::add_node(NODE *&A){
-
-          hol->insert(A);
+void LL::add_node(NODE*& A){
           hol=A;
-
+          hol->insert(A);
+          
        size++;
 
  }

@@ -1,22 +1,25 @@
 #include <iostream>
-using namespace std;
 #include"NODE.h"
+#include "MU_Person.h"
 
-NODE::NODE(int x){
+using namespace std;
+
+NODE::NODE(MU_person* x){
       data=x;
       next=NULL;
-      cout<<"adding "<< x<<endl;
 }
-  NODE:: ~NODE(){
-      cout<<"Node "<<data<<" is being deleted"<<endl;
+NODE::~NODE(){
+      cout<<"Node "<<data->get_id()<<" is being deleted"<<endl;
+      delete data;
 }
 NODE* NODE::move_next(){
       return next;
 }
 void  NODE:: show_node(){
-         cout<<"Node data:"<<data<<endl;
- }
-void NODE::insert(NODE*& x){
-     x->next=this;
+      cout<<"Node data:"<<data->get_id()<<endl;
+}
+void NODE::insert(NODE*& head){
+      this->next = head;
+      head = this;
 
-     }
+}
